@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Data</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4a261;
+        }
+        td {
+            background-color: #e9c46a;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Climate Data</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Precipitation</th>
+        </tr>
+        {% for date, prcp in precipitation_data.items() %}
+        <tr>
+            <td>{{ date }}</td>
+            <td>{{ prcp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
